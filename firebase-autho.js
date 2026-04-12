@@ -165,7 +165,7 @@ export async function handleLogout() {
     // Weka alama ili authGuard isimrudishe dashboard
     sessionStorage.setItem('loggingOut', 'true');
     await signOut(auth);
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
   } catch (error) {
     // Kama imeshindwa, futa alama ili mfumo usikwame
     sessionStorage.removeItem('loggingOut');
