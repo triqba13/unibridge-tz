@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UniBridge | Your Bridge to Global Education</title>
+<link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="login.css">
+</head>
+</head>
+<body>
+<!------------------------------------ LEFT PANEL ----------------------->
+
+<section class="panel-left">
+  <div class="panel-content">
+
+    <div class="panel-header">
+      <div class="panel-logo-icon">🎓</div>
+      <div>
+        <h2 class="panel-brand">Unibridge</h2>
+        <p class="panel-tagline">STUDENT ACCESS</p>
+     </div>
+      
+    </div>
+
+    <div class="panel-nav">
+      <a href="index.html" class="nav-link">Home</a>
+    </div>
+  </div>
+
+  <div class="panel-hero">
+    <h2 class="hero-title">Study Abroad Today <br> <em class="hero-em">Build</em> Your Future Tomorrow</h2>
+    <p class="hero-desc">Discover universities, scholarships, and opportunities worldwide — all in one platform.</p>
+  </div>
+
+  <div class="panel-stats">
+    <div class="stat">
+      <span class="stat-num">50+</span>
+      <span class="stat-lbl">Global University</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">200+</span>
+      <span class="stat-lbl">Scholarship Opportunities</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">100+</span>
+      <span class="stat-lbl">Student Network</span>
+    </div>
+  </div>
+
+</section>
+
+<!----------------------------- RIGHT PANEL --------------------------->
+
+<section class="panel-right">
+ 
+ 
+  <div class="form-wrap">
+    <div class="form-welcome">🔐 &nbsp;Secure Portal</div>
+    <h1 class="form-heading">Welcome</h1>
+    <p class="form-sub">Sign in to continue to your student dashboard.</p>
+ 
+    <div class="field">
+      <label>Email</label>
+      <div class="input-wrap">
+        <input type="email" id="email" placeholder="tariqxxxxgmail.com">
+        <span class="input-icon">✉️</span>
+      </div>
+    </div>
+ 
+    <div class="field">
+      <label>Password</label>
+      <div class="input-wrap">
+        <input type="password" id="password" placeholder="••••••••••">
+        <span class="input-icon">🔒</span>
+        <button class="toggle-pw" id="togglePw" type="button">👁️</button>
+      </div>
+    </div>
+ 
+    <div class="extras">
+      <label class="remember">
+        <input type="checkbox" id="remember">
+        <span class="checkmark" id="chk">✓</span>
+        Remember me
+      </label>
+      <a href="#" class="forgot">Forgot password?</a>
+    </div>
+ 
+    <button class="btn-login" onclick="handleLogin()">Log In</button>
+ 
+    <div class="divider"><hr><span>OR</span><hr></div>
+ 
+    <div class="sso-row">
+      <button class="btn-sso" onclick="handleGoogle()">
+        <img src="images/google.png" width="20px"> Google
+     </button>
+    </div>
+ <!-- Firebase SDKs -->
+    <p class="form-footer">
+      Do you have an account? <a href="signup.html">Register here</a>
+    </p>
+  </div>
+</section>
+<script type="module" src="login-firebase.js"></script>
+</body>
+</html>

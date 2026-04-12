@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UniBridge | Your Bridge to Global Education</title>
+<meta name="description" content="UniBridge is an online platform connecting Tanzanian students to international universities, scholarships, and admission support.">
+<meta name="keywords" content="UniBridge, study abroad, Tanzanian students, international universities, scholarships">
+<meta name="author" content="Tariq Hamza">
+<link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+<link rel="manifest" href="images/favicon_io/site.webmanifest">
+<meta property="og:title" content="UniBridge | Your Bridge to Global Education">
+<meta property="og:description" content="Connecting Tanzanian students to global universities and scholarships.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://unibridge.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UniBridge | Your Bridge to Global Education">
+<meta name="twitter:description" content="Helping Tanzanian students study abroad with confidence.">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" href="appliaction.css">
+</head>
+<body>
+    <!-- ══ SIDEBAR ══ -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">U</div>
+    <span class="logo-name">Unibridge</span>
+  </div>
+ 
+  <div class="sidebar-section">
+    <p class="sidebar-label">Main Menu</p>
+    <a href="dashboard.html" class="nav-item">
+      <i class="bi bi-grid-1x2"></i> Dashboard
+    </a>
+    <a href="universities.html" class="nav-item">
+      <i class="bi bi-building"></i> Universities
+      <span class="nav-badge">50+</span>
+    </a>
+    <a href="scholarships.html" class="nav-item">
+      <i class="bi bi-mortarboard"></i> Scholarships
+      <span class="nav-badge">200+</span>
+    </a>
+    <a href="campus-connect.html" class="nav-item">
+      <i class="bi bi-people"></i> Campus Connect
+    </a>
+    <a href="application.html" class="nav-item active">
+      <i class="bi bi-file-earmark-text"></i> Applications
+      <span class="nav-badge">3</span>
+    </a>
+  </div>
+ 
+  <div class="sidebar-section">
+    <p class="sidebar-label">Account</p>
+    <a href="profile.html" class="nav-item"><i class="bi bi-person"></i> Profile</a> 
+  </div>
+ 
+  <div class="sidebar-bottom">
+    <div class="user-card">
+      <div class="user-avatar">TH</div>
+      <div class="user-info">
+        <div class="user-name">Tariq Hamza</div>
+        <div class="user-role">Student</div>
+      </div>
+      <button class="logout-btn" onclick="handleLogout()">
+        <i class="bi bi-box-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</aside>
+ 
+<!-- ══ MAIN ══ -->
+<div class="main">
+ 
+  <div class="topbar">
+    <div>
+      <h1>My <span>Applications</span></h1>
+      <p>Manage your university applications and get professional help</p>
+    </div>
+  </div>
+ 
+  <div class="content">
+ 
+    <!-- ── CHOOSE PATH ── -->
+    <div class="path-section">
+      <p class="section-label">How would you like to apply?</p>
+      <div class="path-grid">
+ 
+        <!-- Self Apply -->
+        <div class="path-card" id="selfCard" onclick="selectPath('self')">
+          <div class="path-icon self-icon">
+            <i class="bi bi-person-check"></i>
+          </div>
+          <div class="path-content">
+            <h3>Apply Yourself</h3>
+            <p>Go directly to the university's official website and apply on your own. We'll guide you with the right links.</p>
+          </div>
+          <div class="path-badge self-badge">Free</div>
+          <div class="path-check" id="selfCheck"><i class="bi bi-check-circle-fill"></i></div>
+        </div>
+ 
+        <!-- MtishbiScholar -->
+        <div class="path-card featured" id="mtishbiCard" onclick="selectPath('mtishbi')">
+          <div class="path-featured-label">⭐ Recommended</div>
+          <div class="path-icon mtishbi-icon">
+            <i class="bi bi-building-check"></i>
+          </div>
+          <div class="path-content">
+            <h3>Apply with MtishbiScholars <span class="tcu-badge">TCU Verified ✓</span></h3>
+            <p>Let our professional team in Dar es Salaam handle everything — applications, scholarships, visa, passport, and even airport pickup.</p>
+          </div>
+          <div class="path-badge mtishbi-badge">Professional Help</div>
+          <div class="path-check" id="mtishbiCheck"><i class="bi bi-check-circle-fill"></i></div>
+        </div>
+ 
+      </div>
+    </div>
+ 
+    <!-- ── SELF APPLY SECTION ── -->
+    <div class="apply-section" id="selfSection" style="display:none;">
+      <p class="section-label">Select a University to Apply</p>
+      <div class="uni-apply-grid">
+ 
+        <div class="uni-apply-card" onclick="goApply('https://www.srmist.edu.in', 'SRM Institute')">
+          <div class="uni-apply-flag">🇮🇳</div>
+          <div class="uni-apply-info">
+            <div class="uni-apply-name">SRM Institute of Science & Technology</div>
+            <div class="uni-apply-location">Chennai, India</div>
+          </div>
+          <button class="btn-apply-uni">Apply <i class="bi bi-arrow-right"></i></button>
+        </div>
+ 
+        <div class="uni-apply-card" onclick="goApply('https://www.lpu.in', 'LPU')">
+          <div class="uni-apply-flag">🇮🇳</div>
+          <div class="uni-apply-info">
+            <div class="uni-apply-name">Lovely Professional University</div>
+            <div class="uni-apply-location">Punjab, India</div>
+          </div>
+          <button class="btn-apply-uni">Apply <i class="bi bi-arrow-right"></i></button>
+        </div>
+ 
+        <div class="uni-apply-card" onclick="goApply('https://www.cuchd.in', 'Chandigarh University')">
+          <div class="uni-apply-flag">🇮🇳</div>
+          <div class="uni-apply-info">
+            <div class="uni-apply-name">Chandigarh University</div>
+            <div class="uni-apply-location">Chandigarh, India</div>
+          </div>
+          <button class="btn-apply-uni">Apply <i class="bi bi-arrow-right"></i></button>
+        </div>
+ 
+        <div class="uni-apply-card" onclick="goApply('https://home.iitd.ac.in', 'IIT Delhi')">
+          <div class="uni-apply-flag">🇮🇳</div>
+          <div class="uni-apply-info">
+            <div class="uni-apply-name">IIT Delhi</div>
+            <div class="uni-apply-location">New Delhi, India</div>
+          </div>
+          <button class="btn-apply-uni">Apply <i class="bi bi-arrow-right"></i></button>
+        </div>
+ 
+        <div class="uni-apply-card" onclick="goApply('https://www.tum.de', 'TU Munich')">
+          <div class="uni-apply-flag">🇩🇪</div>
+          <div class="uni-apply-info">
+            <div class="uni-apply-name">Technical University of Munich</div>
+            <div class="uni-apply-location">Munich, Germany</div>
+          </div>
+          <button class="btn-apply-uni">Apply <i class="bi bi-arrow-right"></i></button>
+        </div>
+ 
+        <div class="uni-apply-card" onclick="goApply('https://www.unibo.it', 'University of Bologna')">
+          <div class="uni-apply-flag">🇮🇹</div>
+          <div class="uni-apply-info">
+            <div class="uni-apply-name">University of Bologna</div>
+            <div class="uni-apply-location">Bologna, Italy</div>
+          </div>
+          <button class="btn-apply-uni">Apply <i class="bi bi-arrow-right"></i></button>
+        </div>
+ 
+        <div class="uni-apply-card" onclick="goApply('https://www.kau.edu.sa', 'King Abdulaziz University')">
+          <div class="uni-apply-flag">🇸🇦</div>
+          <div class="uni-apply-info">
+            <div class="uni-apply-name">King Abdulaziz University</div>
+            <div class="uni-apply-location">Jeddah, Saudi Arabia</div>
+          </div>
+          <button class="btn-apply-uni">Apply <i class="bi bi-arrow-right"></i></button>
+        </div>
+ 
+        <div class="uni-apply-card" onclick="goApply('https://www.sharjah.ac.ae', 'University of Sharjah')">
+          <div class="uni-apply-flag">🇦🇪</div>
+          <div class="uni-apply-info">
+            <div class="uni-apply-name">University of Sharjah</div>
+            <div class="uni-apply-location">Sharjah, UAE</div>
+          </div>
+          <button class="btn-apply-uni">Apply <i class="bi bi-arrow-right"></i></button>
+        </div>
+ 
+      </div>
+ 
+      <!-- Warning note -->
+      <div class="self-note">
+        <i class="bi bi-info-circle"></i>
+        <p>Note: When you apply directly on the university website, UniBridge cannot track your application status. For status tracking and full support, consider applying through <strong>MtishbiScholars</strong>.</p>
+      </div>
+    </div>
+ 
+    <!-- ── MTISHBI SECTION ── -->
+    <div class="apply-section" id="mtishbiSection" style="display:none;">
+ 
+      <!-- About MtishbiScholars -->
+      <div class="mtishbi-about">
+ 
+        <div class="mtishbi-header">
+          <div class="mtishbi-logo-wrap">
+            <div class="mtishbi-logo-icon">MS</div>
+            <div>
+              <div class="mtishbi-brand">MtishbiScholars</div>
+              <div class="mtishbi-tagline">Your Trusted Study Abroad Partner</div>
+            </div>
+          </div>
+          <div class="mtishbi-verified">
+            <span class="verified-tcu">✓ TCU Verified</span>
+            <span class="verified-kbs">✓ KBS Certified</span>
+          </div>
+        </div>
+ 
+        <!-- Services -->
+        <p class="section-label" style="margin-bottom:12px;">What We Offer</p>
+        <div class="services-grid">
+          <div class="service-item">
+            <i class="bi bi-file-earmark-check"></i>
+            <span>University Applications</span>
+          </div>
+          <div class="service-item">
+            <i class="bi bi-award"></i>
+            <span>Scholarship Assistance</span>
+          </div>
+          <div class="service-item">
+            <i class="bi bi-passport"></i>
+            <span>Visa & Passport Help</span>
+          </div>
+          <div class="service-item">
+            <i class="bi bi-airplane"></i>
+            <span>Airport Pickup</span>
+          </div>
+          <div class="service-item">
+            <i class="bi bi-translate"></i>
+            <span>Document Translation</span>
+          </div>
+          <div class="service-item">
+            <i class="bi bi-headset"></i>
+            <span>24/7 Student Support</span>
+          </div>
+        </div>
+ 
+        <!-- Photo Gallery -->
+        <p class="section-label" style="margin: 20px 0 12px;">Our Office & Events</p>
+        <div class="gallery-wrap">
+          <div class="gallery-track" id="galleryTrack">
+            <img src="images/mtishbischolar/ms1.jpg" alt="MtishbiScholars" class="gallery-img">
+            <img src="images/mtishbischolar/ms2.jpg" alt="MtishbiScholars" class="gallery-img">
+            <img src="images/mtishbischolar/ms3.jpg" alt="MtishbiScholars" class="gallery-img">
+            <img src="images/mtishbischolar/ms4.jpg" alt="MtishbiScholars" class="gallery-img">
+            <img src="images/mtishbischolar/ms5.jpg" alt="MtishbiScholars" class="gallery-img">
+            <img src="images/mtishbischolar/ms6.jpg" alt="MtishbiScholars" class="gallery-img">
+            <img src="images/mtishbischolar/ms7.jpg" alt="MtishbiScholars" class="gallery-img">
+            <img src="images/mtishbischolar/ms8.jpg" alt="MtishbiScholars" class="gallery-img">
+          </div>
+          <button class="gallery-nav prev" onclick="scrollGallery(-1)"><i class="bi bi-chevron-left"></i></button>
+          <button class="gallery-nav next" onclick="scrollGallery(1)"><i class="bi bi-chevron-right"></i></button>
+        </div>
+ 
+        <!-- Testimonial Video -->
+        <p class="section-label" style="margin: 20px 0 12px;">Parent Testimonial</p>
+        <div class="video-wrap">
+          <video controls class="testimonial-video">
+            <source src="images/mtishbischolar/ms (1).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+ 
+        <!-- Contact -->
+        <div class="mtishbi-contact">
+          <div class="contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <span>Dar es Salaam, Tanzania</span>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-whatsapp"></i>
+            <a href="https://wa.me/255615324294" target="_blank">+255 615 324 294</a>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-instagram"></i>
+            <a href="https://instagram.com/mtishbischolars" target="_blank">@mtishbischolars</a>
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <!-- Apply Form CTA -->
+      <div class="form-cta">
+        <div class="form-cta-content">
+          <div class="form-cta-icon"><i class="bi bi-send-check"></i></div>
+          <div>
+            <h3>Ready to Apply with MtishbiScholars?</h3>
+            <p>Fill in our application form and our team will contact you within 24 hours to guide you through the entire process.</p>
+          </div>
+        </div>
+        <a href="https://forms.gle/pKa3J8iTE31GotcE7" target="_blank" class="btn-fill-form">
+          <i class="bi bi-pencil-square"></i> Fill Application Form
+        </a>
+      </div>
+ 
+      <!-- My Applications Status -->
+      <div class="my-apps-section">
+        <p class="section-label">My Applications Status</p>
+        <div class="apps-list" id="appsList"></div>
+      </div>
+ 
+    </div>
+ 
+  </div>
+</div>
+ 
+<!-- Mobile maintenance banner -->
+<div id="mobileBanner" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0b0f1a;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 32px;
+  font-family: 'Segoe UI', sans-serif;
+">
+  <div style="font-size: 56px; margin-bottom: 16px;">🚧</div>
+  <h2 style="color: #fff; font-size: 22px; margin-bottom: 12px;">Mobile Version Coming Soon</h2>
+  <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; max-width: 300px;">
+    We're working hard to make UniBridge perfect on mobile. 
+    For the best experience, please use a <strong style="color:#3b82f6;">tablet, laptop or desktop</strong>.
+  </p>
+  <div style="margin-top: 28px; padding: 12px 24px; background: #3b82f6; color: #fff; border-radius: 50px; font-size: 14px; font-weight: 600;">
+    📱 Mobile version — coming soon!
+  </div>
+</div>
+
+<script>
+  // Show banner only on mobile screens
+  function checkMobile() {
+    const banner = document.getElementById('mobileBanner');
+    if (window.innerWidth <= 768) {
+      banner.style.display = 'flex';
+    } else {
+      banner.style.display = 'none';
+    }
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+</script>
+
+<script src="appliaction.js"></script>
+<script src="theme.js"></script>
+<script type="module" src="auth-protect.js"></script>
+</body>
+</html>

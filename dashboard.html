@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UniBridge | Your Bridge to Global Education</title>
+<meta name="description" content="UniBridge is an online platform connecting Tanzanian students to international universities, scholarships, and admission support.">
+<meta name="keywords" content="UniBridge, study abroad, Tanzanian students, international universities, scholarships">
+<meta name="author" content="Tariq Hamza">
+<link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+<link rel="manifest" href="images/favicon_io/site.webmanifest">
+<meta property="og:title" content="UniBridge | Your Bridge to Global Education">
+<meta property="og:description" content="Connecting Tanzanian students to global universities and scholarships.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://unibridge.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UniBridge | Your Bridge to Global Education">
+<meta name="twitter:description" content="Helping Tanzanian students study abroad with confidence.">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+<body>
+
+  <!-- ══════════════ SIDEBAR ══════════════ -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">U</div>
+    <span class="logo-name">Unibridge</span>
+  </div>
+  
+ 
+  <div class="sidebar-section">
+    <p class="sidebar-label">Main Menu</p>
+ 
+    <a href="dashboard.html" class="nav-item active">
+      <i class="bi bi-grid-1x2"></i>
+      Dashboard
+    </a>
+ 
+    <a href="universities.html" class="nav-item">
+      <i class="bi bi-building"></i>
+      Universities
+      <span class="nav-badge">50+</span>
+    </a>
+ 
+    <a href="scholarships.html" class="nav-item">
+      <i class="bi bi-mortarboard"></i>
+      Scholarships
+      <span class="nav-badge">200+</span>
+    </a>
+ 
+    <a href="campus-connect.html" class="nav-item">
+      <i class="bi bi-people"></i>
+      Campus Connect
+    </a>
+ 
+    <a href="application.html" class="nav-item">
+      <i class="bi bi-file-earmark-text"></i>
+      Applications
+      <span class="nav-badge">3</span>
+    </a>
+  </div>
+ 
+  <div class="sidebar-section">
+    <p class="sidebar-label">Account</p>
+ 
+    <a href="profile.html" class="nav-item">
+      <i class="bi bi-person"></i>
+      Profile
+    </a>
+  </div>
+ 
+  <div class="sidebar-bottom">
+    <div class="user-card">
+      <div class="user-avatar" id="sidebarAvatar">TH</div>
+      <div class="user-info">
+        <div class="user-name" id="sidebarName">Tariq Hamza</div>
+        <div class="user-role">Student</div>
+      </div>
+      <button class="logout-btn" title="Logout" onclick="handleLogout()">
+        <i class="bi bi-box-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</aside>
+ 
+<!-- ══════════════ MAIN ══════════════ -->
+<div class="main">
+ 
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <h1>Welcome back, <span id="welcomeName">Tariq</span> 👋</h1>
+      <p id="currentDate">Loading date...</p>
+    </div>
+    <div class="topbar-right"></div>
+  </div>
+ 
+  <!-- Content -->
+  <div class="content">
+ 
+    <!-- Stats -->
+    <div class="stats-grid">
+ 
+      <div class="stat-card blue">
+        <div class="stat-icon"><i class="bi bi-building"></i></div>
+        <div class="stat-num">50+</div>
+        <div class="stat-label">Universities</div>
+        <div class="stat-badge badge-blue"><i class="bi bi-globe"></i> Available</div>
+      </div>
+ 
+      <div class="stat-card cyan">
+        <div class="stat-icon"><i class="bi bi-mortarboard"></i></div>
+        <div class="stat-num">200+</div>
+        <div class="stat-label">Scholarships</div>
+        <div class="stat-badge badge-cyan"><i class="bi bi-check-circle"></i> Open Now</div>
+      </div>
+ 
+      <div class="stat-card green">
+        <div class="stat-icon"><i class="bi bi-file-earmark-check"></i></div>
+        <div class="stat-num">3</div>
+        <div class="stat-label">My Applications</div>
+        <div class="stat-badge badge-green"><i class="bi bi-arrow-up"></i> 1 Accepted</div>
+      </div>
+ 
+      <div class="stat-card amber">
+        <div class="stat-icon"><i class="bi bi-people"></i></div>
+        <div class="stat-num">100+</div>
+        <div class="stat-label">Student Network</div>
+        <div class="stat-badge badge-amber"><i class="bi bi-person-plus"></i> Connected</div>
+      </div>
+ 
+    </div>
+ 
+    <!-- Universities + Scholarships -->
+    <div class="bottom-grid">
+ 
+      <!-- Universities -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Featured Universities</span>
+          <a href="universities.html" class="card-link">View all →</a>
+        </div>
+ 
+        <div class="uni-item">
+          <div class="uni-abbr">IIT</div>
+          <div class="uni-details">
+            <div class="uni-name">IIT Delhi</div>
+            <div class="uni-country"><i class="bi bi-geo-alt"></i> India</div>
+          </div>
+          <span class="open-pill">Open</span>
+        </div>
+ 
+        <div class="uni-item">
+          <div class="uni-abbr">MU</div>
+          <div class="uni-details">
+            <div class="uni-name">Mumbai University</div>
+            <div class="uni-country"><i class="bi bi-geo-alt"></i> India</div>
+          </div>
+          <span class="open-pill">Open</span>
+        </div>
+ 
+        <div class="uni-item">
+          <div class="uni-abbr">DU</div>
+          <div class="uni-details">
+            <div class="uni-name">Delhi University</div>
+            <div class="uni-country"><i class="bi bi-geo-alt"></i> India</div>
+          </div>
+          <span class="open-pill">Open</span>
+        </div>
+ 
+        <div class="uni-item">
+          <div class="uni-abbr">VIT</div>
+          <div class="uni-details">
+            <div class="uni-name">VIT University</div>
+            <div class="uni-country"><i class="bi bi-geo-alt"></i> India</div>
+          </div>
+          <span class="open-pill">Open</span>
+        </div>
+      </div>
+ 
+      <!-- Scholarships -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Active Scholarships</span>
+          <a href="scholarships.html" class="card-link">View all →</a>
+        </div>
+ 
+        <div class="sch-item">
+          <div class="sch-top">
+            <span class="sch-name">ICCR Scholarship</span>
+            <span class="sch-deadline">Jun 30</span>
+          </div>
+          <div class="sch-meta">India Gov • Full Funded</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:70%"></div></div>
+        </div>
+ 
+        <div class="sch-item">
+          <div class="sch-top">
+            <span class="sch-name">Aga Khan Foundation</span>
+            <span class="sch-deadline">Aug 15</span>
+          </div>
+          <div class="sch-meta">International • Partial</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+        </div>
+ 
+        <div class="sch-item">
+          <div class="sch-top">
+            <span class="sch-name">AfDB Scholarship</span>
+            <span class="sch-deadline">May 1</span>
+          </div>
+          <div class="sch-meta">Africa • Full Funded</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+        </div>
+      </div>
+ 
+    </div>
+ 
+    <!-- Applications -->
+    <div class="app-section">
+      <p class="section-label">My Applications</p>
+      <div class="app-grid">
+ 
+        <div class="app-card">
+          <div class="app-uni">IIT Delhi</div>
+          <div class="app-course">Computer Science</div>
+          <div class="app-status s-review">
+            <div class="status-dot"></div> Under Review
+          </div>
+          <div class="app-date">Submitted Mar 20, 2026</div>
+        </div>
+ 
+        <div class="app-card">
+          <div class="app-uni">Mumbai University</div>
+          <div class="app-course">Business Administration</div>
+          <div class="app-status s-pending">
+            <div class="status-dot"></div> Pending
+          </div>
+          <div class="app-date">Submitted Mar 15, 2026</div>
+        </div>
+ 
+        <div class="app-card">
+          <div class="app-uni">ICCR Scholarship</div>
+          <div class="app-course">Full Scholarship 2026</div>
+          <div class="app-status s-accept">
+            <div class="status-dot"></div> Accepted
+          </div>
+          <div class="app-date">Submitted Feb 28, 2026</div>
+        </div>
+ 
+      </div>
+    </div>
+ 
+  </div>
+</div>
+ 
+<!-- Mobile maintenance banner -->
+<div id="mobileBanner" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0b0f1a;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 32px;
+  font-family: 'Segoe UI', sans-serif;
+">
+  <div style="font-size: 56px; margin-bottom: 16px;">🚧</div>
+  <h2 style="color: #fff; font-size: 22px; margin-bottom: 12px;">Mobile Version Coming Soon</h2>
+  <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; max-width: 300px;">
+    We're working hard to make UniBridge perfect on mobile. 
+    For the best experience, please use a <strong style="color:#3b82f6;">tablet, laptop or desktop</strong>.
+  </p>
+  <div style="margin-top: 28px; padding: 12px 24px; background: #3b82f6; color: #fff; border-radius: 50px; font-size: 14px; font-weight: 600;">
+    📱 Mobile version — coming soon!
+  </div>
+</div>
+
+<script>
+  // Show banner only on mobile screens
+  function checkMobile() {
+    const banner = document.getElementById('mobileBanner');
+    if (window.innerWidth <= 768) {
+      banner.style.display = 'flex';
+    } else {
+      banner.style.display = 'none';
+    }
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+</script>
+
+<script src="dashboard.js"></script> 
+<script type="module" src="auth-protect.js"></script>
+</body>
+</html>

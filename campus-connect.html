@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UniBridge | Your Bridge to Global Education</title>
+<meta name="description" content="UniBridge is an online platform connecting Tanzanian students to international universities, scholarships, and admission support.">
+<meta name="keywords" content="UniBridge, study abroad, Tanzanian students, international universities, scholarships">
+<meta name="author" content="Tariq Hamza">
+<link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+<link rel="manifest" href="images/favicon_io/site.webmanifest">
+<meta property="og:title" content="UniBridge | Your Bridge to Global Education">
+<meta property="og:description" content="Connecting Tanzanian students to global universities and scholarships.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://unibridge.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UniBridge | Your Bridge to Global Education">
+<meta name="twitter:description" content="Helping Tanzanian students study abroad with confidence.">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" href="campus-connect.css">
+</head>
+<body>
+  <!-- ══ SIDEBAR ══ -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-icon">U</div>
+    <span class="logo-name">Unibridge</span>
+  </div>
+ 
+  <div class="sidebar-section">
+    <p class="sidebar-label">Main Menu</p>
+    <a href="dashboard.html" class="nav-item">
+      <i class="bi bi-grid-1x2"></i> Dashboard
+    </a>
+    <a href="universities.html" class="nav-item">
+      <i class="bi bi-building"></i> Universities
+      <span class="nav-badge">50+</span>
+    </a>
+    <a href="scholarships.html" class="nav-item">
+      <i class="bi bi-mortarboard"></i> Scholarships
+      <span class="nav-badge">200+</span>
+    </a>
+    <a href="campus-connect.html" class="nav-item active">
+      <i class="bi bi-people"></i> Campus Connect
+    </a>
+    <a href="application.html" class="nav-item">
+      <i class="bi bi-file-earmark-text"></i> Applications
+      <span class="nav-badge">3</span>
+    </a>
+  </div>
+ 
+  <div class="sidebar-section">
+    <p class="sidebar-label">Account</p>
+    <a href="profile.html" class="nav-item">
+      <i class="bi bi-person"></i> Profile
+    </a>
+  </div>
+ 
+  <div class="sidebar-bottom">
+    <div class="user-card">
+      <div class="user-avatar">TH</div>
+      <div class="user-info">
+        <div class="user-name">Tariq Hamza</div>
+        <div class="user-role">Student</div>
+      </div>
+      <button class="logout-btn" onclick="handleLogout()">
+        <i class="bi bi-box-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</aside>
+ 
+<!-- ══ MAIN ══ -->
+<div class="main">
+ 
+  <div class="topbar">
+    <div class="topbar-left">
+      <h1>Campus <span>Connect</span></h1>
+      <p>Connect with Tanzanian & African students studying abroad</p>
+    </div>
+  </div>
+ 
+  <div class="content">
+ 
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card blue">
+        <div class="stat-icon"><i class="bi bi-people"></i></div>
+        <div class="stat-num">100+</div>
+        <div class="stat-label">Students Connected</div>
+        <div class="stat-badge badge-blue">Worldwide</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-icon"><i class="bi bi-globe"></i></div>
+        <div class="stat-num">12</div>
+        <div class="stat-label">Countries</div>
+        <div class="stat-badge badge-green">Active</div>
+      </div>
+      <div class="stat-card amber">
+        <div class="stat-icon"><i class="bi bi-building"></i></div>
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Universities</div>
+        <div class="stat-badge badge-amber">Represented</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-icon"><i class="bi bi-whatsapp"></i></div>
+        <div class="stat-num">Direct</div>
+        <div class="stat-label">WhatsApp Connect</div>
+        <div class="stat-badge badge-purple">Instant</div>
+      </div>
+    </div>
+ 
+    <!-- Search & Filter -->
+    <div class="search-bar">
+      <div class="search-wrap">
+        <i class="bi bi-search"></i>
+        <input type="text" id="searchInput" placeholder="Search by name, university, course...">
+      </div>
+      <select class="filter-select" id="countryFilter">
+        <option value="all">All Countries</option>
+        <option value="india">India</option>
+        <option value="germany">Germany</option>
+        <option value="italy">Italy</option>
+        <option value="turkey">Turkey</option>
+        <option value="saudi">Saudi Arabia</option>
+        <option value="uae">UAE</option>
+      </select>
+      <select class="filter-select" id="courseFilter">
+        <option value="all">All Courses</option>
+        <option value="engineering">Engineering</option>
+        <option value="medicine">Medicine</option>
+        <option value="business">Business</option>
+        <option value="cs">Computer Science</option>
+        <option value="design">Design</option>
+      </select>
+      <select class="filter-select" id="yearFilter">
+        <option value="all">All Years</option>
+        <option value="1">Year 1</option>
+        <option value="2">Year 2</option>
+        <option value="3">Year 3</option>
+        <option value="4">Year 4</option>
+      </select>
+    </div>
+ 
+    <!-- Results info -->
+    <p class="results-info">
+      Showing <span id="resultCount">12</span> students
+    </p>
+ 
+    <!-- Students Grid -->
+    <div class="students-grid" id="studentsContainer"></div>
+ 
+  </div>
+</div>
+ 
+<!-- ══ MODAL ══ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal">
+ 
+    <button class="modal-close" onclick="closeModal()">
+      <i class="bi bi-x"></i>
+    </button>
+ 
+    <!-- Profile Header -->
+    <div class="modal-profile-header">
+      <div class="modal-avatar-wrap">
+        <div class="modal-avatar" id="mAvatar"></div>
+        <div class="modal-online-dot" id="mOnlineDot"></div>
+      </div>
+      <div class="modal-profile-info">
+        <div class="modal-student-name" id="mName"></div>
+        <div class="modal-student-uni" id="mUni"></div>
+        <div class="modal-student-location" id="mLocation"></div>
+      </div>
+    </div>
+ 
+    <div class="modal-body">
+ 
+      <!-- Tags -->
+      <div class="modal-tags" id="mTags"></div>
+ 
+      <hr class="modal-divider">
+ 
+      <!-- About -->
+      <p class="modal-section-title">About</p>
+      <p class="modal-desc" id="mDesc"></p>
+ 
+      <!-- Details grid -->
+      <p class="modal-section-title">Student Details</p>
+      <div class="modal-info-grid" id="mInfoGrid"></div>
+ 
+      <!-- Experience -->
+      <p class="modal-section-title">Can Help With</p>
+      <div class="help-tags" id="mHelpTags"></div>
+ 
+      <!-- Actions -->
+      <div class="modal-actions">
+        <button class="btn-whatsapp" id="mWhatsappBtn" onclick="connectWhatsApp()">
+          <i class="bi bi-whatsapp"></i> Connect on WhatsApp
+        </button>
+        <button class="btn-close-modal" onclick="closeModal()">
+          Close
+        </button>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+
+<!-- Mobile maintenance banner -->
+<div id="mobileBanner" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0b0f1a;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 32px;
+  font-family: 'Segoe UI', sans-serif;
+">
+  <div style="font-size: 56px; margin-bottom: 16px;">🚧</div>
+  <h2 style="color: #fff; font-size: 22px; margin-bottom: 12px;">Mobile Version Coming Soon</h2>
+  <p style="color: #94a3b8; font-size: 15px; line-height: 1.7; max-width: 300px;">
+    We're working hard to make UniBridge perfect on mobile. 
+    For the best experience, please use a <strong style="color:#3b82f6;">tablet, laptop or desktop</strong>.
+  </p>
+  <div style="margin-top: 28px; padding: 12px 24px; background: #3b82f6; color: #fff; border-radius: 50px; font-size: 14px; font-weight: 600;">
+    📱 Mobile version — coming soon!
+  </div>
+</div>
+
+<script>
+  // Show banner only on mobile screens
+  function checkMobile() {
+    const banner = document.getElementById('mobileBanner');
+    if (window.innerWidth <= 768) {
+      banner.style.display = 'flex';
+    } else {
+      banner.style.display = 'none';
+    }
+  }
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+</script>
+
+<script src="campus-connect.js"></script>
+<script src="theme.js"></script>
+<script type="module" src="auth-protect.js"></script>
+</body>
+</html>
