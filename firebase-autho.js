@@ -109,9 +109,9 @@ export function updateUserUI(user) {
   if (fieldEmail) fieldEmail.value = user.email;
 }
 
-// ══════════════════════════════════════
+
 //  LOGIN — Email/Password
-// ══════════════════════════════════════
+
 export async function loginWithEmail(email, password) {
   try {
     const result = await signInWithEmailAndPassword(auth, email, password);
@@ -127,9 +127,7 @@ export async function loginWithEmail(email, password) {
   }
 }
 
-// ══════════════════════════════════════
 //  LOGIN — Google
-// ══════════════════════════════════════
 export async function loginWithGoogle() {
   try {
     const result = await signInWithPopup(auth, provider);
@@ -139,9 +137,9 @@ export async function loginWithGoogle() {
   }
 }
 
-// ══════════════════════════════════════
+
 //  SIGNUP — Email/Password
-// ══════════════════════════════════════
+
 export async function signupWithEmail(name, email, password) {
   try {
     const result = await createUserWithEmailAndPassword(auth, email, password);
