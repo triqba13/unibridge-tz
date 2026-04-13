@@ -104,7 +104,7 @@ nav.scrolled {
   font-size: 13px; font-weight: 500;
   color: var(--cream); padding: 8px 20px;
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 15px;
   transition: all 0.3s;
   letter-spacing: 0.04em;
 }
