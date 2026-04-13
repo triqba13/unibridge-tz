@@ -28,281 +28,343 @@
 </head>
 <body>
     
-<!-- ===== HEADER / NAVBAR ===== -->
-<header>
-  <nav>
-    <!-- Left: Logo -->
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-        <img src="images/favicon_io/favicon.ico" alt="UniBridge Logo" height="40">
-      </a>
-      <h2>Unibridge</h2>
-    </div>
-
-    <!-- Center: Navigation Links -->
-    <ul class="nav-center">
-      <li><a href="index.html" class="active">Home</a></li>
-    </ul>
-
-    <!-- Right: Auth Buttons -->
-    <div class="nav-right">
-       <a href="login.html">login</a>
-    </div>
-
-  </nav>
-</header>
-
+<!-- ══ NAVBAR ══ -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <div class="nav-logo-icon">U</div>
+    <span class="nav-logo-name">UniBridge</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#features">Platform</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#why">Why Us</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="login.html" class="btn-nav-login">Sign In</a>
+    <a href="signup.html" class="btn-nav-signup">Get Started</a>
+  </div>
+</nav>
+ 
+<!-- ══ HERO ══ -->
 <section class="hero">
-  <div class="hero-container">
-
-    <div class="hero-content">
-      <span class="hero-badge">YOUR BRIDGE TO GLOBAL EDUCATION</span>
-
-      <h1>
-        Study Abroad with
-        <span class="highlight">Confidence</span>
+  <div class="hero-inner">
+ 
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span>Your Bridge to Global Education</span>
+      </div>
+ 
+      <h1 class="hero-title">
+        Study Abroad
+        <em>with Confidence</em>
       </h1>
-
-      <p>
-        UniBridge connects Tanzanian students with international universities,
-        scholarships, and expert guidance—making your dream of studying abroad
-        accessible and affordable.
+ 
+      <p class="hero-desc">
+        UniBridge connects Tanzanian students with world-class universities,
+        life-changing scholarships, and a community of students who've walked
+        the path before you.
       </p>
-
-      <div class="hero-buttons">
-        <a href="login.html" class="btn primary">Get Started Free</a>
-        <a href="#" class="btn secondary">Explore Universities</a>
+ 
+      <div class="hero-actions">
+        <a href="signup.html" class="btn-primary">
+          Begin Your Journey <i class="bi bi-arrow-right"></i>
+        </a>
+        <a href="login.html" class="btn-secondary">
+          Sign In <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+ 
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">50+</div>
+          <div class="hero-stat-label">Universities</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">200+</div>
+          <div class="hero-stat-label">Scholarships</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">100+</div>
+          <div class="hero-stat-label">Students Connected</div>
+        </div>
       </div>
     </div>
-
-    <div class="hero-image">
-      <img src="images/student1.jpg" alt="Student studying abroad">
+ 
+    <!-- Circular Orbit Gallery -->
+    <div class="hero-right">
+      <div class="orbit-wrap">
+ 
+        <!-- Floating badges -->
+        <div class="orbit-badge">🇮🇳 India</div>
+        <div class="orbit-badge">🇩🇪 Germany</div>
+        <div class="orbit-badge">🇮🇹 Italy</div>
+ 
+        <!-- Center -->
+        <div class="orbit-center">
+          <div class="orbit-center-logo">UB</div>
+          <div class="orbit-center-text">Global Network</div>
+        </div>
+ 
+        <!-- Ring 3 (decorative) -->
+        <div class="orbit-ring orbit-ring-3"></div>
+ 
+        <!-- Ring 1 — inner orbit -->
+        <div class="orbit-ring orbit-ring-1">
+          <div class="orbit-photo">
+            <img src="https://picsum.photos/seed/student1/200/200" alt="Student">
+          </div>
+          <div class="orbit-photo">
+            <img src="https://picsum.photos/seed/student2/200/200" alt="Student">
+          </div>
+          <div class="orbit-photo">
+            <img src="https://picsum.photos/seed/student3/200/200" alt="Student">
+          </div>
+        </div>
+ 
+        <!-- Ring 2 — outer orbit -->
+        <div class="orbit-ring orbit-ring-2">
+          <div class="orbit-photo">
+            <img src="https://picsum.photos/seed/student4/200/200" alt="Student">
+          </div>
+          <div class="orbit-photo">
+            <img src="https://picsum.photos/seed/student5/200/200" alt="Student">
+          </div>
+          <div class="orbit-photo">
+            <img src="https://picsum.photos/seed/student6/200/200" alt="Student">
+          </div>
+          <div class="orbit-photo">
+            <img src="https://picsum.photos/seed/student7/200/200" alt="Student">
+          </div>
+          <div class="orbit-photo">
+            <img src="https://picsum.photos/seed/student8/200/200" alt="Student">
+          </div>
+        </div>
+ 
+      </div>
     </div>
-
+ 
   </div>
 </section>
-
-<section id="features">
-  <h2>Everything You Need in One Platform</h2>
-  <p>
-    UniBridge provides comprehensive tools and support to guide you through
-    every step of your study abroad journey.
-  </p>
-
-  <div class="features-container">
-
-    <div class="feature-card">
-      <i class="bi bi-globe"></i>
-      <h3>Global Universities</h3>
-      <p>
-        Access information about international universities starting with
-        India and expanding worldwide.
-      </p>
+ 
+<!-- ══ DIVIDER ══ -->
+<div class="section-divider">
+  <div class="divider-line"></div>
+  <div class="divider-diamond"></div>
+  <div class="divider-line"></div>
+</div>
+ 
+<!-- ══ FEATURES ══ -->
+<section class="features" id="features">
+  <div class="section-header animate">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span>The Platform</span>
+      <div class="section-eyebrow-line"></div>
     </div>
-
-    <div class="feature-card">
-      <i class="bi bi-mortarboard"></i>
-      <h3>Scholarships</h3>
-      <p>
-        Discover scholarships linked to specific universities and programs.
-      </p>
-    </div>
-
-    <div class="feature-card">
-      <i class="bi bi-file-earmark-text"></i>
-      <h3>Admission Support</h3>
-      <p>
-        Choose to apply on your own or let UniBridge assist you with the
-        application process.
-      </p>
-    </div>
-
-    <div class="feature-card">
-      <i class="bi bi-people"></i>
-      <h3>Campus Connect</h3>
-      <p>
-        Connect with Tanzanian and African students already studying at
-        different universities.
-      </p>
-    </div>
-
+    <h2 class="section-title">Everything You Need <em>in One Place</em></h2>
+    <p class="section-desc">A complete ecosystem designed to take you from aspiration to admission — with confidence at every step.</p>
   </div>
-</section>
-
-<section id="how-it-works">
-  <h2>How UniBridge Works</h2>
-  <p>
-    UniBridge simplifies your journey to studying abroad through a structured
-    and student-friendly process.
-  </p>
-
-  <div class="steps-container">
-
-    <div class="step-card">
-      <span class="step-number">1</span>
-      <h3>Create Your Profile</h3>
-      <p>
-        Register and create a personal profile by providing your academic
-        background, preferred country, and intended course of study.
-      </p>
+ 
+  <div class="features-grid">
+    <div class="feature-card animate">
+      <div class="feature-num">01</div>
+      <div class="feature-icon"><i class="bi bi-building"></i></div>
+      <div class="feature-title">Global Universities</div>
+      <p class="feature-desc">Access detailed profiles of 50+ international universities across India, Germany, Italy, UAE, Saudi Arabia and more.</p>
     </div>
-
-    <div class="step-card">
-      <span class="step-number">2</span>
-      <h3>Discover Universities</h3>
-      <p>
-        Explore a curated list of international universities with detailed
-        information about programs, requirements, and facilities.
-      </p>
+    <div class="feature-card animate">
+      <div class="feature-num">02</div>
+      <div class="feature-icon"><i class="bi bi-mortarboard"></i></div>
+      <div class="feature-title">Scholarships</div>
+      <p class="feature-desc">Discover 200+ scholarships — fully funded and partial — matched to your profile, course, and destination country.</p>
     </div>
-
-    <div class="step-card">
-      <span class="step-number">3</span>
-      <h3>Find Scholarships</h3>
-      <p>
-        View available scholarships linked to specific universities and programs,
-        including eligibility criteria and application deadlines.
-      </p>
+    <div class="feature-card animate">
+      <div class="feature-num">03</div>
+      <div class="feature-icon"><i class="bi bi-file-earmark-check"></i></div>
+      <div class="feature-title">Admission Support</div>
+      <p class="feature-desc">Apply independently or let our verified partner MtishbiScholars guide you through every step of the process.</p>
     </div>
-
-    <div class="step-card">
-      <span class="step-number">4</span>
-      <h3>Connect with Students</h3>
-      <p>
-        Use Campus Connect to interact with Tanzanian and African students
-        currently studying at your selected universities.
-      </p>
-    </div>
-
-    <div class="step-card">
-      <span class="step-number">5</span>
-      <h3>Submit Applications</h3>
-      <p>
-        Apply directly to universities or request UniBridge assistance
-        to manage and submit your applications.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-
-<section id="why-unibridge">
-  <div class="why-container">
-
-    <h2>Why Choose UniBridge?</h2>
-    <p class="why-intro">
-      UniBridge is designed to make international education more accessible,
-      affordable, and transparent for Tanzanian students.
-    </p>
-
-    <div class="why-grid">
-
-      <div class="why-card">
-        <i class="bi bi-shield-check"></i>
-        <h3>Trusted & Transparent</h3>
-        <p>
-          We provide verified university information and clear application
-          processes without hidden charges.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <i class="bi bi-cash-coin"></i>
-        <h3>Affordable Services</h3>
-        <p>
-          Our platform reduces the high costs charged by traditional agents,
-          making study abroad affordable.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <i class="bi bi-people"></i>
-        <h3>Student Community</h3>
-        <p>
-          Connect with Tanzanian and African students already studying
-          at international universities.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <i class="bi bi-globe"></i>
-        <h3>Global Opportunities</h3>
-        <p>
-          Access universities and scholarships across different countries
-          from one centralized platform.
-        </p>
-      </div>
-
+    <div class="feature-card animate">
+      <div class="feature-num">04</div>
+      <div class="feature-icon"><i class="bi bi-people"></i></div>
+      <div class="feature-title">Campus Connect</div>
+      <p class="feature-desc">Connect directly via WhatsApp with Tanzanian students already studying at your target universities.</p>
     </div>
   </div>
 </section>
-
-
-<section id="cta">
-  <div class="cta-container">
-
-    <h2>Ready to Start Your Journey?</h2>
-
-    <p>
-      Join hundreds of Tanzanian students who are already pursuing their
-      dreams of international education.
-    </p>
-
-    <a href="signup.html" class="cta-button">
-      Create Free Account
-    </a>
-
+ 
+<!-- ══ HOW IT WORKS ══ -->
+<section class="how-it-works" id="how-it-works">
+  <div class="section-header animate">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span>The Process</span>
+      <div class="section-eyebrow-line"></div>
+    </div>
+    <h2 class="section-title">Your Journey, <em>Simplified</em></h2>
+    <p class="section-desc">From registration to departure — UniBridge walks with you at every stage.</p>
+  </div>
+ 
+  <div class="steps-wrap">
+    <div class="step-card animate">
+      <div class="step-num-wrap"><span class="step-num">I</span></div>
+      <div class="step-title">Create Your Profile</div>
+      <p class="step-desc">Register and share your academic background, preferred country, and course of interest.</p>
+    </div>
+    <div class="step-card animate">
+      <div class="step-num-wrap"><span class="step-num">II</span></div>
+      <div class="step-title">Discover Universities</div>
+      <p class="step-desc">Explore curated university profiles with programs, requirements, and deadlines.</p>
+    </div>
+    <div class="step-card animate">
+      <div class="step-num-wrap"><span class="step-num">III</span></div>
+      <div class="step-title">Find Scholarships</div>
+      <p class="step-desc">Browse scholarships matched to your chosen universities and field of study.</p>
+    </div>
+    <div class="step-card animate">
+      <div class="step-num-wrap"><span class="step-num">IV</span></div>
+      <div class="step-title">Connect with Students</div>
+      <p class="step-desc">Talk directly with Tanzanian students already living your dream — get real insights.</p>
+    </div>
+    <div class="step-card animate">
+      <div class="step-num-wrap"><span class="step-num">V</span></div>
+      <div class="step-title">Submit & Fly</div>
+      <p class="step-desc">Apply with confidence — independently or with professional support from our verified partners.</p>
+    </div>
   </div>
 </section>
-
-<footer id="footer">
-  <div class="footer-container">
-
-    <div class="footer-about">
-      <h3>UniBridge</h3>
-      <p>
-        UniBridge is an online platform dedicated to connecting Tanzanian
-        students with international universities, scholarships, and student
-        communities worldwide.
-      </p>
+ 
+<!-- ══ WHY UNIBRIDGE ══ -->
+<section class="why" id="why">
+  <div class="section-header animate">
+    <div class="section-eyebrow">
+      <div class="section-eyebrow-line"></div>
+      <span>Why UniBridge</span>
+      <div class="section-eyebrow-line"></div>
     </div>
-
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Universities</a></li>
-        <li><a href="#">Scholarships</a></li>
-        <li><a href="#">Campus Connect</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-support">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <p>Dar es Salaam, Tanzania</p>
-      <p>Email: info@unibridge.com</p>
-      <p>Phone: +255 744588248</p>
-    </div>
-
+    <h2 class="section-title">Built for <em>Tanzanian Students</em></h2>
+    <p class="section-desc">We understand your journey because we're part of it.</p>
   </div>
-
+ 
+  <div class="why-grid">
+    <div class="why-card animate">
+      <div class="why-icon"><i class="bi bi-shield-check"></i></div>
+      <div class="why-content">
+        <div class="why-title">Trusted & Transparent</div>
+        <p class="why-desc">Verified university information, honest fees, and no hidden charges. What you see is what you get — always.</p>
+      </div>
+    </div>
+    <div class="why-card animate">
+      <div class="why-icon"><i class="bi bi-cash-coin"></i></div>
+      <div class="why-content">
+        <div class="why-title">Affordable Access</div>
+        <p class="why-desc">We eliminate the need for expensive agents. Our platform gives you the same quality of guidance at a fraction of the cost.</p>
+      </div>
+    </div>
+    <div class="why-card animate">
+      <div class="why-icon"><i class="bi bi-people"></i></div>
+      <div class="why-content">
+        <div class="why-title">Real Student Community</div>
+        <p class="why-desc">Connect with Tanzanian students who are living abroad right now — ask questions, get honest answers, feel prepared.</p>
+      </div>
+    </div>
+    <div class="why-card animate">
+      <div class="why-icon"><i class="bi bi-globe"></i></div>
+      <div class="why-content">
+        <div class="why-title">Global Reach</div>
+        <p class="why-desc">From India to Germany, Italy to the Gulf — access opportunities across multiple continents from one platform.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ══ CTA ══ -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2 class="cta-title">Ready to Begin Your <em>Global Journey?</em></h2>
+    <p class="cta-desc">Join hundreds of Tanzanian students who are already building their future at world-class universities.</p>
+    <div class="cta-actions">
+      <a href="signup.html" class="btn-primary">
+        Create Free Account <i class="bi bi-arrow-right"></i>
+      </a>
+      <a href="login.html" class="btn-secondary">
+        Already have an account? Sign in
+      </a>
+    </div>
+  </div>
+</section>
+ 
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">U</div>
+        <span class="footer-logo-name">UniBridge</span>
+      </div>
+      <p class="footer-brand-desc">Connecting Tanzanian students with international universities, scholarships, and student communities worldwide.</p>
+    </div>
+ 
+    <div>
+      <p class="footer-col-title">Platform</p>
+      <div class="footer-links">
+        <a href="login.html">Universities</a>
+        <a href="login.html">Scholarships</a>
+        <a href="login.html">Campus Connect</a>
+        <a href="login.html">Applications</a>
+      </div>
+    </div>
+ 
+    <div>
+      <p class="footer-col-title">Support</p>
+      <div class="footer-links">
+        <a href="login.html">Contact Us</a>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+ 
+    <div>
+      <p class="footer-col-title">Contact</p>
+      <div class="footer-contact">
+        <p><i class="bi bi-geo-alt"></i> Dar es Salaam, Tanzania</p>
+        <p><i class="bi bi-envelope"></i> info@unibridge.com</p>
+        <p><i class="bi bi-telephone"></i> +255 744 588 248</p>
+      </div>
+    </div>
+  </div>
+ 
   <div class="footer-bottom">
-    <p>
-      &copy; 2026 UniBridge. All rights reserved.
-    </p>
+    <p class="footer-copy">© 2026 UniBridge. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="#" class="footer-social"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="footer-social"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="footer-social"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="footer-social"><i class="bi bi-whatsapp"></i></a>
+    </div>
   </div>
 </footer>
+ <script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+ 
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, i * 100);
+    }
+  });
+}, { threshold: 0.1 });
+ 
+document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
